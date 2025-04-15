@@ -92,6 +92,11 @@ jobs:
       shell: bash
       run: |
         cd build && ninja
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: build
+        path: build
     - name: Running C++ Tests
       shell: bash
       run: |
